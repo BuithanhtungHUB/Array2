@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  str_in = window.prompt("nhập chuỗi: ");
+  var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+  var result = [];
+
+  for(var x=0; x<str_in.length; x++)
+  {
+    if(UPPER.indexOf(str_in[x]) !== -1)
+    {
+      result.push(str_in[x].toLocaleLowerCase());
+    }
+    else if(LOWER.indexOf(str_in[x]) !== -1)
+    {
+      result.push(str_in[x].toUpperCase());
+    }
+    else
+    {
+      result.push(str_in[x]);
+    }
+  }
+  document.write(result.join(''));
+</script>
+</body>
+</html>

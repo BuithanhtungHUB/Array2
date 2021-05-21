@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<h1>DICTIONARY</h1>
+<p>English:</p>
+<input type="text" id="word_in">
+<button onclick="dich()">Translate</button>
+<br>
+<br>
+<span><strong>Result: </strong></span><span id="word_out"></span>
+<script>
+
+    function dich() {
+        wordin = document.getElementById('word_in').value;
+        console.log(wordin);
+        const Eng = ['dog', 'cat', 'bird', 'fish', 'tiger', 'mouse'];
+        const Vie = ['chó', 'mèo', 'chim', 'cá', 'hổ', 'chuột'];
+        let check = true;
+        let result = document.getElementById('word_out');
+        for (let i = 0; i < Eng.length; i++) {
+            if (Eng[i] === wordin) {
+                check = true;
+                result.innerHTML = Vie[i];
+                break;
+            }
+            check = false;
+        }
+        if (check == false) {
+            result.innerHTML = "Không tìm thấy";
+        }
+    }
+
+
+</script>
+</body>
+</html>
